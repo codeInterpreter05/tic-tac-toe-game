@@ -1,3 +1,5 @@
+// game logic
+
 let boxes = document.getElementsByClassName("box");
 let message = document.getElementById("message");
 let resetButton = document.getElementById("reset-btn");
@@ -79,3 +81,19 @@ resetButton.addEventListener("click", () => {
     message.innerHTML = "Player X to start";
     message.style.color = "#4EBE85";
 })
+
+//implenting light mode
+
+let body = document.body;
+let modeButton = document.getElementById("mode-btn");
+
+modeButton.addEventListener("click", () => {
+    body.classList.toggle("light-mode");
+    resetButton.style.color = "white";
+    modeButton.childNodes[0].style.color = "white";
+    modeButton.childNodes[0].classList.toggle("fa-moon");
+    modeButton.childNodes[0].classList.toggle("fa-sun");
+    if(modeButton.childNodes[0].classList.contains("fa-sun"))
+        modeButton.childNodes[0].style.fontSize = "1.5rem";
+})
+

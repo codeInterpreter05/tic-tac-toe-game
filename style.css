@@ -15,6 +15,16 @@
     --o-color: #F34337;
 }
 
+.light-mode{
+    /* #8E8F98 */
+    --primary-color: white;
+    --secondary-color: #191E2E;
+    --nav-font-color: #010B15;
+    --font-color: #191E2E;
+    --x-color: #4EBE85;
+    --o-color: #F34337;
+}
+
 body{
     height: 100vh;
     width: 100vw;
@@ -33,22 +43,26 @@ nav{
 
 .logo-container{
     height: 100%;
-    width: 30%;
+    width: 40%;
     display: flex;
     justify-content: center;
     gap: 1.5rem;
     align-items: center;
 }
 
-.logo-container > .title{
+.title{
     color: var(--nav-font-color);
-    font-size: 1.5rem;
-    max-width: 45%;
+    font-size: 2rem;
+    min-width: 200px;
     font-weight: 600;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
 }
 
 .menu{
-    width: 35%;
+    width: auto;
     height: 100%;
     display: flex;
     justify-content: center;
@@ -58,7 +72,7 @@ nav{
 
 .btn{
     height: 3rem;
-    width: 7rem;
+    min-width: 130px;
     border-radius: 0.6rem;
     display: flex;
     justify-content: center;
@@ -78,8 +92,8 @@ nav{
 }
 
 #mode-btn{
-    height: 3rem;
-    width: 3rem;
+    min-height: 50px;
+    min-width: 50px;
     border-radius: 50%;
     background-color: var(--secondary-color);
     border: 1.2px solid var(--font-color);
@@ -90,7 +104,7 @@ nav{
 }
 
 #mode-btn > i{
-    color: var(--x-color);
+    color: #8E8F98;
     font-size: 1.7rem;
 }
 
@@ -134,8 +148,7 @@ nav{
 /* this is about.css */
 
 .rules{
-    max-width: 98%;
-    margin: auto;
+    width: 100vw;
     display: flex;
     flex-direction: column;
     justify-content: space-evenly;
@@ -168,4 +181,97 @@ nav{
     font-size: 1.5rem;
 }
 
+/* responsive design */
+
+@media screen and (min-width: 710px) and (max-width: 930px) {
+    nav{
+        padding: 0 2rem;
+        display: flex;
+        justify-content: space-evenly;
+        align-items: center;
+    }
+
+    .logo-container{
+        width: 50%;
+        justify-content: center;
+        gap: 0.25rem;
+    }
+
+    .rules{
+        width: 100%;
+        padding: 1rem 2rem;
+        margin: 0;
+    }
+
+    .rule{
+        width: 100%;
+        height: auto;
+        margin: 1rem 0;
+    }
+
+}
+
+@media screen and (max-width: 710px) {
+    nav{
+        height: 15rem;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: start;
+        padding: 1rem;
+        gap: 2rem;
+        margin-bottom: 1rem;
+    }
+
+    .logo-container{
+        width: 100%;
+    }
+
+    .menu{
+        width: 100%;
+        gap: 0.6rem;
+    }
+
+    .btn{
+        width: 40px;
+    }
+
+    #message-container{
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    #message{
+        width: 100%;
+        text-align: center;
+    }
+
+    .game{
+        height: 21rem;
+        width: 21rem;
+    }
+    
+    .box{
+        height: 6.5rem;
+        width: 6.5rem;
+    }
+
+    .rules{
+        width: 100%;
+        padding: 1rem 2rem;
+    }
+
+    .rules > h1 {
+        font-size: 2.25rem;
+    }
+
+    .rule{
+        width: 100%;
+        height: auto;
+        margin: 1rem 0;
+    }
+
+}
 
